@@ -1,0 +1,21 @@
+<project outputDir="..\bin\Release\Confused" snKey="" xmlns="http://confuser.codeplex.com">
+  <settings name="settings1">
+    <confusion id="anti debug" />
+    <confusion id="anti dump" />
+    <confusion id="anti ildasm" />
+    <confusion id="const encrypt" />
+    <confusion id="ctor proxy" />
+    <confusion id="ctrl flow" />
+    <confusion id="res encrypt" />
+    <confusion id="reduce md" />
+    <confusion id="mtd proxy" /> 
+    <!-- <confusion id="invalid md" /> -->
+  </settings>
+  <!-- <packer id="compressor" /> -->
+  <assembly path="..\bin\Release\softGetawayService.exe" isMain="true">
+    <config id="settings1" />
+    <module name="softGetawayService.exe">
+      <config id="settings2" />
+    </module>
+  </assembly>
+</project>

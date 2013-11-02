@@ -1,0 +1,5 @@
+﻿<ToggleButton x:Class="softGetawayClient.MyToggleButton"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="clr-namespace:softGetawayClient">
+</ToggleButton>

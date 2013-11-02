@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/softGetawayHost" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/softGetawayHost" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConnectionSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxPeerCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SSID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectionSettings" nillable="true" type="tns:ConnectionSettings" />
+  <xs:complexType name="ArrayOfSharableConnection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SharableConnection" nillable="true" type="tns:SharableConnection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSharableConnection" nillable="true" type="tns:ArrayOfSharableConnection" />
+  <xs:complexType name="SharableConnection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SharableConnection" nillable="true" type="tns:SharableConnection" />
+  <xs:complexType name="ArrayOfNetworkPeerService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NetworkPeerService" nillable="true" type="tns:NetworkPeerService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNetworkPeerService" nillable="true" type="tns:ArrayOfNetworkPeerService" />
+  <xs:complexType name="NetworkPeerService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isSetHostName" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isSetIP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="storage" nillable="true" type="tns:NetworkPeerStorage" />
+      <xs:element minOccurs="0" name="type" type="tns:NetworkPeerType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NetworkPeerService" nillable="true" type="tns:NetworkPeerService" />
+  <xs:complexType name="NetworkPeerStorage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MACAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iconFile" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NetworkPeerStorage" nillable="true" type="tns:NetworkPeerStorage" />
+  <xs:simpleType name="NetworkPeerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="WiFi" />
+      <xs:enumeration value="Ethernet" />
+      <xs:enumeration value="Bluetooth" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="NetworkPeerType" nillable="true" type="tns:NetworkPeerType" />
+  <xs:simpleType name="getawayState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Idle" />
+      <xs:enumeration value="Initialization" />
+      <xs:enumeration value="Starting" />
+      <xs:enumeration value="StartFailed" />
+      <xs:enumeration value="Started" />
+      <xs:enumeration value="Stopping" />
+      <xs:enumeration value="StopFailed" />
+      <xs:enumeration value="Stopped" />
+      <xs:enumeration value="StartingIP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="getawayState" nillable="true" type="tns:getawayState" />
+</xs:schema>

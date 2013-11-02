@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://softGetaway" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://softGetaway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://softGetaway/Imports">
+      <xsd:import schemaLocation="http://localhost:21345/softGetaway/service?xsd=xsd0" namespace="http://softGetaway" />
+      <xsd:import schemaLocation="http://localhost:21345/softGetaway/service?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:21345/softGetaway/service?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/softGetawayHost" />
+      <xsd:import schemaLocation="http://localhost:21345/softGetaway/service?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISoftGetawayHost_IsShouldStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsShouldStart" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_IsShouldStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsShouldStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_Start_InputMessage">
+    <wsdl:part name="parameters" element="tns:Start" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_Start_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_Stop_InputMessage">
+    <wsdl:part name="parameters" element="tns:Stop" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_Stop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetPrivateConnectionSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPrivateConnectionSettings" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetPrivateConnectionSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPrivateConnectionSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetPrivateConnectionSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrivateConnectionSettings" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetPrivateConnectionSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrivateConnectionSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetSharableConnections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharableConnections" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetSharableConnections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharableConnectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetSharedConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharedConnection" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetSharedConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharedConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetPeers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeers" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetPeers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetTraceLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTraceLines" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetTraceLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTraceLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetPeer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPeer" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetPeer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPeerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetIP" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SetIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIP" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_LoadConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadConfig" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_LoadConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SaveConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfig" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_SaveConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetState" />
+  </wsdl:message>
+  <wsdl:message name="ISoftGetawayHost_GetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISoftGetawayHost">
+    <wsdl:operation name="IsShouldStart">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/IsShouldStart" message="tns:ISoftGetawayHost_IsShouldStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/IsShouldStartResponse" message="tns:ISoftGetawayHost_IsShouldStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Start">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/Start" message="tns:ISoftGetawayHost_Start_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/StartResponse" message="tns:ISoftGetawayHost_Start_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Stop">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/Stop" message="tns:ISoftGetawayHost_Stop_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/StopResponse" message="tns:ISoftGetawayHost_Stop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPrivateConnectionSettings">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/SetPrivateConnectionSettings" message="tns:ISoftGetawayHost_SetPrivateConnectionSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/SetPrivateConnectionSettingsResponse" message="tns:ISoftGetawayHost_SetPrivateConnectionSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrivateConnectionSettings">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetPrivateConnectionSettings" message="tns:ISoftGetawayHost_GetPrivateConnectionSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetPrivateConnectionSettingsResponse" message="tns:ISoftGetawayHost_GetPrivateConnectionSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharableConnections">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetSharableConnections" message="tns:ISoftGetawayHost_GetSharableConnections_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetSharableConnectionsResponse" message="tns:ISoftGetawayHost_GetSharableConnections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharedConnection">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetSharedConnection" message="tns:ISoftGetawayHost_GetSharedConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetSharedConnectionResponse" message="tns:ISoftGetawayHost_GetSharedConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeers">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetPeers" message="tns:ISoftGetawayHost_GetPeers_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetPeersResponse" message="tns:ISoftGetawayHost_GetPeers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTraceLines">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetTraceLines" message="tns:ISoftGetawayHost_GetTraceLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetTraceLinesResponse" message="tns:ISoftGetawayHost_GetTraceLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPeer">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/SetPeer" message="tns:ISoftGetawayHost_SetPeer_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/SetPeerResponse" message="tns:ISoftGetawayHost_SetPeer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetIP">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/SetIP" message="tns:ISoftGetawayHost_SetIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/SetIPResponse" message="tns:ISoftGetawayHost_SetIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIP">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetIP" message="tns:ISoftGetawayHost_GetIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetIPResponse" message="tns:ISoftGetawayHost_GetIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadConfig">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/LoadConfig" message="tns:ISoftGetawayHost_LoadConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/LoadConfigResponse" message="tns:ISoftGetawayHost_LoadConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfig">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/SaveConfig" message="tns:ISoftGetawayHost_SaveConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/SaveConfigResponse" message="tns:ISoftGetawayHost_SaveConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <wsdl:input wsaw:Action="http://softGetaway/ISoftGetawayHost/GetState" message="tns:ISoftGetawayHost_GetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://softGetaway/ISoftGetawayHost/GetStateResponse" message="tns:ISoftGetawayHost_GetState_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

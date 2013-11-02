@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2015bbf1-3592-406b-8642-e2470504101f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:21345/softGetaway/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="6e2912d5-03f4-4d25-8a1d-f31887dac242" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?xsd=xsd2" />
+    <MetadataFile FileName="service1.disco" MetadataType="Disco" ID="36a613c4-fe0a-4e26-beff-6f8db0e890d3" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?disco" />
+    <MetadataFile FileName="softGetawayHost.wsdl" MetadataType="Wsdl" ID="45c17427-8850-4bfa-ae04-0639b09df0c4" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?wsdl" />
+    <MetadataFile FileName="service31.xsd" MetadataType="Schema" ID="90321c92-cdf5-4e95-8aeb-d56c6811c60e" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?xsd=xsd0" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="02929c30-5c6f-49d0-8e97-1ec652274bb0" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?wsdl=wsdl0" />
+    <MetadataFile FileName="service32.xsd" MetadataType="Schema" ID="f06819ee-e2a2-46d2-87e8-9b09b6444218" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?xsd=xsd1" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5da5b453-0270-4aec-a384-9a68f4854d01" SourceId="1" SourceUrl="http://localhost:21345/softGetaway/service?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
